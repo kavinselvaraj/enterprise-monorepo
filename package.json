@@ -1,0 +1,27 @@
+{
+    "name": "enterprise-monorepo",
+    "private": true,
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "turbo dev",
+        "dev:ibe": "turbo dev --filter=@repo/ibe-app",
+        "dev:admin": "turbo dev --filter=@repo/admin-app",
+        "build": "turbo build",
+        "build:ibe": "turbo build --filter=@repo/ibe-app",
+        "build:admin": "turbo build --filter=@repo/admin-app",
+        "lint": "turbo lint",
+        "type-check": "turbo type-check",
+        "clean": "turbo clean",
+        "format": "prettier --write \"**/*.{ts,tsx,md,json,css}\" --ignore-path .gitignore"
+    },
+    "devDependencies": {
+        "prettier": "^3.4.2",
+        "turbo": "^2.3.3",
+        "typescript": "^5.7.3"
+    },
+    "engines": {
+        "node": ">=20.0.0",
+        "pnpm": ">=9.0.0"
+    },
+    "packageManager": "pnpm@9.15.1"
+}

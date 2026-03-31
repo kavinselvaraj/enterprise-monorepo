@@ -1,0 +1,17 @@
+{
+    "name": "@repo/tailwind-config",
+    "version": "0.0.1",
+    "private": true,
+    "type": "module",
+    "files": [
+        "tailwind.config.ts",
+        "index.ts"
+    ],
+    "exports": {
+        ".": "./tailwind.config.ts",
+        "./index": "./index.ts"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.17"
+    }
+}

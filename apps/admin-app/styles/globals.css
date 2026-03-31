@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --radius: 0.375rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-surface-subtle text-gray-900;
+    font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+:focus-visible {
+    @apply outline-none ring-2 ring-brand-500 ring-offset-2;
+}
+
+@layer base {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-surface-muted;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply rounded-full bg-gray-300;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        @apply bg-gray-400;
+    }
+}
